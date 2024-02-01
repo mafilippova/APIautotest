@@ -1,6 +1,6 @@
 package org.example;
 
-public class AddToCart {
+public class  AddToCart {
     private int itemId = 11;
     private int quantity = 1;
 
