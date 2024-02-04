@@ -1,4 +1,8 @@
-package org.example.UserData;
+package org.example;
+
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserData {
         private Integer id;
@@ -7,7 +11,8 @@ public class UserData {
         private String last_name;
         private String avatar;
 
-    public UserData(Integer id, String email, String first_name, String last_name, String avatar) {
+        @JsonCreator
+    public UserData(@JsonProperty("id") Integer id, @JsonProperty("email") String email, @JsonProperty("first_name") String first_name, @JsonProperty("last_name") String last_name,  @JsonProperty("avatar") String avatar) {
         this.id = id;
         this.email = email;
         this.first_name = first_name;
